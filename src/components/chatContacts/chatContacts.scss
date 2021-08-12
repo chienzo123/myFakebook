@@ -1,0 +1,18 @@
+@import '../../sass/mixin.sass';
+
+.contacts{
+    padding-top: 20px;
+}
+.contacts__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #65676b;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.contacts__header .MuiSvgIcon-root{
+    margin: 0 5px;
+}

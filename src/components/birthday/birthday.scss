@@ -1,0 +1,23 @@
+@import '../../sass/mixin.sass';
+
+.birthdays{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+
+}
+.birthdays__header{
+    font-size: 16px;
+    color: #65676b;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.birthdays .sidebar__row{
+    margin-top: 10px;
+}
+.birthdays .sidebar__row .MuiSvgIcon-root{
+    margin-right: 10px;
+}
+.birthdays .sidebar__row span{
+    font-size: 15px;
+    font-weight: 400;
+}

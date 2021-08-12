@@ -1,0 +1,81 @@
+@import '../../sass/mixin.sass';
+
+.postcreator{
+   
+    flex-direction: colum;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    width: 110%;
+    box-shadow: 0 5px 7px -7px rgba(0,0,0,0.75);
+} 
+.postcreator__top{
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #eff2f5;
+}  
+.postcreator__top form {
+    flex: 1;
+    display: flex;
+
+}
+.postcreator__top form input {
+    background-color: #eff2f5;
+    outline-width: 0;
+    border: none;
+    padding: 5px 20px;
+    margin: 0 10px;
+    border-radius: 999px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.postcreator__top form input:hover{
+    background-color: #e4e6e9;
+    color: #606266;
+}
+.postcreator__top form button{
+    display: none;
+}
+.postcreator__input{
+    flex: 1;
+    background-color: #eff2f5;
+    outline-width: 0;
+    border: none;
+    padding: 5px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.postcreator__input:hover{
+    background-color: #e4e6e9;
+    color: #606266;
+}
+.postcreator__bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+.postcreator__bottom--option{
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 5px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.postcreator__bottom--option h3{
+    font-size: medium;
+    margin-left: 10px;
+}
+.postcreator__bottom--option:hover{
+    background-color: #eff2f5;
+    color: #606266;
+}
+.postcreator__bottom--option .nomob{
+    display: none;
+    @include mq(600px){
+        display: flex;
+    }
+}

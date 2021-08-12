@@ -1,0 +1,11 @@
+@import '../../sass/mixin.sass';
+
+.sidebar__left{
+    display: none;
+    @include mq(1100px){
+    display: block;
+    flex: 0.33;
+    
+    }
+
+}

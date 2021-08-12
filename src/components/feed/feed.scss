@@ -1,0 +1,19 @@
+@import '../../sass/mixin.sass';
+
+.feed{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding: 30px 20px ;
+    width: calc(100% - 60%);
+    @include mq(1100px){
+        padding: 30px 40px;
+        max-width: 700px;
+    }
+    @include mq(ll){
+        padding: 30px 150px;
+        max-width: 750px;
+    }
+
+}
