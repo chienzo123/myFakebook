@@ -6,7 +6,9 @@ import Header from './components/header/hader';
  import RightSidebar from './components/rightSlidebar/rightSlidebar';
 
 
+
 function App() {
+  
   return (
     <div className="mainwrp app">
      

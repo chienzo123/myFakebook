@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Avatar } from '@material-ui/core'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlinedIcon from '@material-ui/icons/ChatBubbleOutlined';
@@ -7,8 +7,12 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './post.scss'
 
-function Post({authorPic, authorName, timestamp, message, optionalImg}){
+
+function Post({authorPic, authorName, timestamp, message, optionalImg, like, id}){
+    const [check, setCheck] = useState('');
+    
     return (
+        
         <div className="post">
             <div className="post__top">
             <Avatar src ={authorPic} className="post__avatar" />
@@ -24,11 +28,28 @@ function Post({authorPic, authorName, timestamp, message, optionalImg}){
         <img src={optionalImg} className="post__media--img" alt=""  />
         
         </div>
+        <p className="like" id = {`1${id}`}>{like} người khác</p>
        <div className="post__options">
-        <div className="post__options--option">
+        <div className="post__options--option " id = {`${id}`}  onClick={()=> {
+        
+           setCheck(!check)
+            if(check)
+            document.getElementById(id).setAttribute("style","color:blue")
+            document.getElementById("1"+id).innerHTML = "Bạn và " + like + " người khác";
+            if(!check){
+                document.getElementById(id).removeAttribute("style")
+                document.getElementById("1"+id).innerHTML = "" + like + " người khác";
+            }
+            console.log(check);
+        }
+            
+            }>
         <ThumbUpIcon/>
         <p>Like</p>
         </div>
+   
+       
+       
         <div className="post__options--option">
         <ChatBubbleOutlinedIcon/>
         <p>Comment</p>
@@ -47,4 +68,5 @@ function Post({authorPic, authorName, timestamp, message, optionalImg}){
             
     )
 }
+
 export default Post

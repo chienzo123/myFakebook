@@ -8,7 +8,6 @@ import Contacts from './Contacts'
 function Feed(){
     return(
         <div className="feed">
-
         <StoryReel/>
         <PostCreator/>
         <Provider>

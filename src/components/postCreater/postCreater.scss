@@ -34,9 +34,7 @@
     background-color: #e4e6e9;
     color: #606266;
 }
-.postcreator__top form button{
-    display: none;
-}
+
 .postcreator__input{
     flex: 1;
     background-color: #eff2f5;
@@ -78,4 +76,27 @@
     @include mq(600px){
         display: flex;
     }
+}
+.postcreator__bottom1{
+    width: 100%;
+
+}
+.postcreator__bottom1 button{
+    width: 100%;
+    color: blue;
+    height: 40px;
+    background-color: white;
+    cursor: pointer;
+    
+    border-radius: 10px;
+    
+    font-size: 18px;
+   
+    transition-duration: 0.4s;
+    border: 2px solid #4CAF50;
+
+}
+.postcreator__bottom1 button:hover{
+    background-color: blue;
+    color: white;
 }

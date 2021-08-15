@@ -14,11 +14,14 @@ export default class Contacts extends Component{
                                     contacts.length > 0 && contacts.map(contact => 
                                         <Post
                                         key={contact.id}
+                                        id={contact.id}
                                         authorPic={contact.authorPic}
                                         authorName={contact.authorName}
                                         timestamp = {contact.timestamp}
                                         message={contact.message}
                                         optionalImg={contact.optionalImg}
+                                        like={contact.like}
+                                        
                                         />
                                         )
                                 }
