@@ -5,10 +5,10 @@ import ChatBubbleOutlinedIcon from '@material-ui/icons/ChatBubbleOutlined';
 import NearMeIcon from '@material-ui/icons/NearMe';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import './post.scss'
+import './watchItem.scss'
 
 
-function Post({authorPic, authorName, timestamp, message, optionalImg, like, id}){
+function WatchItem({authorPic, authorName, timestamp, message, optionalVid, like, id}){
     const [check, setCheck] = useState(true);
     
     return (
@@ -25,7 +25,7 @@ function Post({authorPic, authorName, timestamp, message, optionalImg, like, id}
         <p>{message}</p>
         </div>
         <div className="post__media">
-        <img src={optionalImg} className="post__media--img" alt=""  />
+        <img src={optionalVid} className="post__media--img" alt=""  />
         
         </div>
         <p className="like" id = {`1${id}`}>{like} người khác</p>
@@ -69,4 +69,4 @@ function Post({authorPic, authorName, timestamp, message, optionalImg, like, id}
     )
 }
 
-export default Post
+export default WatchItem

@@ -17,8 +17,8 @@ function PostCreator(){
     const [input, setInput] = useState('');
     
     const user = {
-        img : "https://lh3.googleusercontent.com/a-/AOh14GjgVLZkhG5nY06FjlJoSmPUh-9Xb2sTZW9EObgF=s96-c",
-        name : "Hoàng Quyết Chiến"
+        img : firebase.auth().currentUser.photoURL,
+        name : firebase.auth().currentUser.displayName
     }
  
     return(

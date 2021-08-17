@@ -2,13 +2,14 @@ import React from 'react'
 import Story from '../story/story'
 import './storyRell.scss';
 import AddStory from '../addStories/addStories';
+import firebase from 'firebase';
 
 
 
 function StoryReel(){
-    const user ={
-        img : "https://lh3.googleusercontent.com/a-/AOh14GjgVLZkhG5nY06FjlJoSmPUh-9Xb2sTZW9EObgF=s96-c",
-        name : "Hoàng Quyết Chiến"
+    const user = {
+        img : firebase.auth().currentUser.photoURL,
+        name : firebase.auth().currentUser.displayName
     }
     return (
         <div className="stories">
